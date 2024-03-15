@@ -121,7 +121,7 @@ void teacher(){
         default: printf("invalid input\n");
     }
 }
-
+/*
 void display_result(){
     fp= fopen("student.txt", "rb+");
     struct Student student_arr[num];
