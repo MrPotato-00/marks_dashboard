@@ -92,7 +92,7 @@ void update_marks(){
 void display(){
     system("cls");
     printf("\n---Student details----\n");
-    printf("%-10s %-30s %-20s %-20s %-20s %-20s %-20s %-20s\n", "Rollno", "Name" ,"Marks1", "Marks2", "Marks3", "Marks4", "Marks5", "Total Marks");
+    printf("%-10s %-30s %-20s %-20s %-20s %-20s %-20s %-20s\n", "Rollno", "Name" ,"Subject1", "Subject2", "Subject3", "Subject4", "Subject5", "Total Marks");
 
     fp= fopen("student.txt", "rb");
     while(fread(&st, sizeof(st), 1, fp)==1){
@@ -121,13 +121,13 @@ void teacher(){
         default: printf("invalid input\n");
     }
 }
-/*
+
 void display_result(){
     fp= fopen("student.txt", "rb+");
     struct Student student_arr[num];
     int k=0;   
     while(fread(&st, sizeof(st), 1,fp)==1){
-        //struct Student newstudent=
+        struct Student newstudent
         
         
         newstudent.rollno= st.rollno;
@@ -139,7 +139,7 @@ void display_result(){
         newstudent.marks5=st.marks5;
         newstudent.totalmarks=st.totalmarks;
         
-        //student_arr[k++]={st.rollno, st.name, st.marks1,st.marks2, st.marks3, st.marks4, st.marks5, st.totalmarks};
+        student_arr[k++]=newstudent;
 
     }
 
@@ -156,7 +156,7 @@ void display_result(){
     }
 
     printf("\nAll Student Details Sorted by Total Marks:\n");
-    printf("%-10s %-30s %-20s %-20s %-20s %-20s %-20s %-20s\n", "Rollno", "Name" ,"Marks1", "Marks2", "Marks3", "Marks4", "Marks5", "Total Marks");
+    printf("%-10s %-30s %-20s %-20s %-20s %-20s %-20s %-20s\n", "Rollno", "Name" ,"Subject1", "Subject2", "Subject3", "Subject4", "Subject5", "Total Marks");
     for (i = 0; i < num; i++) {
           printf("%-10d %-30s %-20d %-20d %-20d %-20d %-20d %-20d\n", student_arr[i].rollno, student_arr[i].name, student_arr[i].marks1,student_arr[i].marks2, student_arr[i].marks3, student_arr[i].marks4, student_arr[i].marks5, student_arr[i].totalmarks);
 
